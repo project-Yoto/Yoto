@@ -1,6 +1,6 @@
 # Final Project - *Your Own Store* 
 
-**Yoto** is a market place for individuals to sell goods or give away Items
+**Yoto** is a market place for individuals to shop, sell goods or give away Items
 
 ## Description of App
 
