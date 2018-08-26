@@ -1,11 +1,11 @@
 import React from 'react';
-import App from './src/App';
+import Root from './src/App';
 
 export default class App extends React.Component {
   render() {
     return (
       //React-Redux Provider
-      <App />
+      <Root />
     );
   }
 }
