@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-class Item extends Component {
+class MyShopScreen extends Component {
     render() {
         return (
+            //This is an empty screen
             <div>
                 
             </div>
@@ -10,4 +11,4 @@ class Item extends Component {
     }
 }
 
-export default Item;
+export default MyShopScreen;
