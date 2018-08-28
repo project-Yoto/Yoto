@@ -6,7 +6,7 @@ import LoginScreen from '../Screens/LoginScreen';
 import Loading from '../Components/Loading';
 import MainScreen from '../Screens/MainScreen';
 
-
+// your app is shit MainScreen
 
 export const AuthFlow = createSwitchNavigator(
   {
