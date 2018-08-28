@@ -1,13 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import MainScreen from './Screens/MainScreen';
+import AuthFlow from './Config/router';
+import LoginScreen from './Screens/LoginScreen';
 
-class Root extends React.Component {
+
+export default class Root extends React.Component {
   render() {
     return (
-      <MainScreen />
+      <AuthFlow />
     );
   }
 }
 
-export default Root;
+
