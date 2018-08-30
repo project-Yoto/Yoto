@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Text, View } from 'react-native'
 
-class ShopScreen extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
+export default class ShopScreen extends Component {
+  render() {
+    return (
+      <View>
+        <Text> textInComponent </Text>
+      </View>
+    )
+  }
 }
-
-export default ShopScreen;

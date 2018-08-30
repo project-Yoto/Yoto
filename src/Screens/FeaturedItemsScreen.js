@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import { View, Image, StyleSheet, ScrollView, Text}
+import React, { Component } from 'react'
+import { Text, View } from 'react-native'
 
-class FeaturedItemScreen extends Component {
-    render() {
-        return (
-        <ScrollView>
-            
-        </ScrollView>
-        );
-    }
+export default class FeaturedItemsScreen extends Component {
+  render() {
+    return (
+      <View>
+        <Text> textInComponent </Text>
+      </View>
+    )
+  }
 }
-
-export default FeaturedItemScreen;

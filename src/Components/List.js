@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import { FlatList, Text, View, Image, StyleSheet } from 'react-native';
-import { listData, shopList} from '../Config/dummyData'
+import { listData, shopList } from '../Config/dummyData'
 
 
 //List of items
-const ListOfFeaturedItems =() => (
+const ListOfFeaturedItems = () => (
     <View style={styles.list}>
         <Text style={styles.text}>List of Items</Text>
-        <FlatList data={listData} horizontal renderItem={({ item }) => <ItemOfMainList {...item} />} keyExtractor={(item) => item.itemName} />
+        <FlatList data={listData} horizontal renderItem={({ item }) => 
+        <ItemOfMainList {...item} />} keyExtractor={(item) => item.itemName} />
         <Text style={styles.text}>See more</Text>
-    </View> 
+    </View>
 )
 
-const ListOfFreeItems =() => (
+const ListOfFreeItems = () => (
     <View style={styles.list}>
         <Text style={styles.text}>List of free Items</Text>
-        <FlatList data={listData} horizontal renderItem={({ item }) => <ItemOfMainList {...item}/>} keyExtractor={(item) => item.itemName} />
+        <FlatList data={listData} horizontal renderItem={({ item }) => <ItemOfMainList {...item} />} keyExtractor={(item) => item.itemName} />
         <Text style={styles.text}>See more</Text>
-    </View> 
+    </View>
 )
 
 
@@ -37,7 +38,7 @@ class ItemOfMainList extends Component {
                 <Text>{this.props.itemName}</Text>
                 <Image
                     style={{ width: 100, height: 130 }}
-                    source={require('/home/torof/desk/Project_Yoto/Yoto/src/Assets/pictures/regency-flatware-dessert-spoon-12-pack.jpg')}
+                    source={require('../Assets/pictures/regency-flatware-dessert-spoon-12-pack.jpg')}
                 />
             </View>
         );
@@ -59,8 +60,6 @@ class ShopOfMainList extends Component {
 
 
 
-
-
 export { ListOfFeaturedItems, ListOfShops, ListOfFreeItems };
 
 const styles = StyleSheet.create({
@@ -71,10 +70,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         height: 200,
     },
-    text:{
+    text: {
         textAlign: "center"
     },
-    view:{
+    view: {
         marginLeft: 5,
         borderWidth: 1,
         padding: 2,

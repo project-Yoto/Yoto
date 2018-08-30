@@ -6,15 +6,11 @@ import * as firebase from 'firebase';
 export default class Loading extends React.Component {
 
 
-    componentWillMount() {
-        this.logicHandler();
-    };
-
-    logicHandler() {
+    componentDidMount() {
         firebase.auth().onAuthStateChanged(user => {
             if (user != null) {
                 console.log("We are authenticated now!");
-                this.props.navigation.navigate('Main');
+                this.props.navigation.navigate('MainScreen');
             }
             else {
                 console.log('Not authenticated');
@@ -22,6 +18,7 @@ export default class Loading extends React.Component {
             }
         });
     };
+
 
     render() {
         return (

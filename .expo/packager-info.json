@@ -1,8 +1,8 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": "https://gn-s6c.johnnetr.yoto.exp.direct",
-  "packagerNgrokUrl": "https://packager.gn-s6c.johnnetr.yoto.exp.direct",
-  "ngrokPid": 12995
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 32396,
+  "expoServerNgrokUrl": "https://4v-7ue.johnnetr.yoto.exp.direct",
+  "packagerNgrokUrl": "https://packager.4v-7ue.johnnetr.yoto.exp.direct",
+  "ngrokPid": 32413
 }

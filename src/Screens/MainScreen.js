@@ -6,7 +6,6 @@ export default class MainScreen extends Component {
 
     render() {
         return (
-            // Three FlatList with horizontal scrolling
             <ScrollView>
                 <ListOfFeaturedItems/>
                 <ListOfShops/>
