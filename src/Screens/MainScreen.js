@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import { ListOfFeaturedItems, ListOfShops, ListOfFreeItems } from '../Components/List';
+import { connect } from 'react-redux';
 
-export default class MainScreen extends Component {
+function MainScreen(props) {
+    return (
+        <ScrollView>
+            <ListOfFeaturedItems count={props.count} />
+            {/*             <ListOfShops />
+            <ListOfFreeItems /> */}
+        </ScrollView>
+    )
+}
 
-    render() {
-        return (
-            <ScrollView>
-                <ListOfFeaturedItems/>
-                <ListOfShops/>
-                <ListOfFreeItems/>
-            </ScrollView>
-        )
+function mapStateToProps(state) {
+    return {
+        //Testing redux
+        count: state.count
     }
 }
+
+
+export default connect(mapStateToProps)(MainScreen);
 

@@ -4,14 +4,17 @@ import { listData, shopList } from '../Config/dummyData'
 
 
 //List of items
-const ListOfFeaturedItems = () => (
+const ListOfFeaturedItems = (props) => {
+    console.log('testing redux', props.count);
+    return (
     <View style={styles.list}>
-        <Text style={styles.text}>List of Items</Text>
+        <Text style={styles.text}>Redux Test: {props.count}</Text>
         <FlatList data={listData} horizontal renderItem={({ item }) => 
         <ItemOfMainList {...item} />} keyExtractor={(item) => item.itemName} />
         <Text style={styles.text}>See more</Text>
     </View>
-)
+    )
+}
 
 const ListOfFreeItems = () => (
     <View style={styles.list}>
