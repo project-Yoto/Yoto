@@ -3,12 +3,11 @@ import * as firebase from 'firebase';
 import firestore from '../Config/firebase';
 import React from 'react';
 
-
 //Put in dummy data here
 initialState  = {
     image: 'past in url',
     dummyName: 'blabla',
-    count: '3333'
+    count: 'waallah'
 }
 
 

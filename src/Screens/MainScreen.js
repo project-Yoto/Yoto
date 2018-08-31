@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
 import { ScrollView, Text } from 'react-native';
 import { ListOfFeaturedItems, ListOfShops, ListOfFreeItems } from '../Components/List';
-import { connect } from 'react-redux';
+import * as firebase from 'firebase';
+import fire from '../Config/firebase';
 
-function MainScreen(props) {
-    return (
-        <ScrollView>
-            <ListOfFeaturedItems count={props.count} />
-            {/*             <ListOfShops />
-            <ListOfFreeItems /> */}
-        </ScrollView>
-    )
-}
 
-function mapStateToProps(state) {
-    return {
-        //Testing redux
-        count: state.count
+class MainScreen extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            products: null
+        }
+    }
+    componentWillMount() {
+        console.log('test')
+        firebase.database().ref('/users').once('value', (obj) => {
+            this.setState({products: obj});
+            console.log(this.state.products);
+        });
+    }
+    render() {
+        return (
+            <ScrollView>
+                <ListOfFeaturedItems />
+                <ListOfShops />
+                <ListOfFreeItems />
+            </ScrollView>
+        )
     }
 }
 
 
-export default connect(mapStateToProps)(MainScreen);
+export default MainScreen;
 
