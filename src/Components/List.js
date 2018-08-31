@@ -41,7 +41,7 @@ class ItemOfMainList extends Component {
                 <Text>{this.props.itemName}</Text>
                 <Image
                     style={{ width: 100, height: 130 }}
-                    source={require('../Assets/pictures/regency-flatware-dessert-spoon-12-pack.jpg')}
+                    source={require('/home/torof/desk/Project_Yoto/Yoto/src/Assets/pictures/spinning-dioamond.gif')}
                 />
             </View>
         );
